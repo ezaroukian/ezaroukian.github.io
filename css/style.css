@@ -205,12 +205,12 @@
 				}
 
 	/* Lists */
-
+/*
 		ul.default
 		{
-			/*margin: 0;
-			padding: 0em 0em 1.5em 0em;*/
-			list-style: disc; /*none;*/
+			margin: 0;
+			padding: 0em 0em 1.5em 0em;
+			list-style: none;
 		}
 		
 			ul.default li
@@ -264,7 +264,7 @@
 			padding-top: 0px;
 			border-top: none;
 		}
-							
+*/						
 
 	/* Buttons */
 		
