@@ -773,7 +773,7 @@
 		position: relative;
 		background: url(../images/header.jpg) no-repeat bottom center;
 		background-attachment: fixed;
-		background-size: cover;
+		background-size: contain;
 		text-align: center;
 	}
 	
