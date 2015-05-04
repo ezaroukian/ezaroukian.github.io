@@ -209,7 +209,7 @@
 		{
 			margin: 0;
 			padding: 0em 0em 1.5em 0em;
-			list-style: none;
+			list-style: disc; /*none;*/
 		}
 		
 			ul.default li
