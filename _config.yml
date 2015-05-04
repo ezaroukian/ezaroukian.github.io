@@ -1,4 +1,2 @@
-highlighter: pygments
-encoding: utf-8
-
-url: ezaroukian.github.io
+name: Erin Zaroukian
+markdown: kramdown
