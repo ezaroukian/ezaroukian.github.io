@@ -207,8 +207,7 @@
 	/* Lists */
 		ul
 		{
-			margin: 0;
-			padding: 0em 0em 1.5em 0em;
+
 			list-style-type: square;
 		}
 		
@@ -216,7 +215,7 @@
 		{
 			margin: 0;
 			padding: 0em 0em 1.5em 0em;
-			list-style-type: square;
+			list-style: none;
 		}
 		
 			ul.default li
