@@ -98,7 +98,7 @@
 	
 	p, ul, ol, dl, table
 	{
-		text-align: left; /*added*/
+		/*text-align: left; /*added*/
 		margin-bottom: 1em;
 	}
 
