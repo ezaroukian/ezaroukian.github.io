@@ -1,5 +1,3 @@
-//Take input from textbox
-//$(document).ready(function () {
 
 var reserved = ["break","default","function","return","var","case","delete","if","switch","void","catch","do","in","this","while","const","else","instanceof","throw","with","continue","finally","let","try","debugger","for","new","typeof"];//reserved words cannot be used for property names
 
@@ -8,7 +6,7 @@ function popDictJS(txt){
 	//Takes a String, builds dictionary of all words in the file mapped to their counts. Returns dictionary.
 	var user = {};
 	var words = txt.split(" ");
-	//remove any reserved words
+	//remove any reserved words (I could remove the frequent words here too)
 	var finalWords = [];
 	for (i=0; i<words.length; i++){
 		var safeWord = true; 
@@ -22,7 +20,7 @@ function popDictJS(txt){
 			finalWords.push(words[i]);
 		}
 	}
-	//remove . , ? ! : ; ) ( and eol and make lowercase 
+	//remove . , ? ! : ; ) (  and  eol  and  make lowercase 
 	for (i=0; i<finalWords.length; i++){
 		var word = finalWords[i];
 		word = word.replace(/(\r\n|\n|\r)/gm,"");
@@ -69,12 +67,8 @@ function popDictJS(txt){
 
 
 
-//compare vector with py-gen dictionaries
-//from other file dictKirk
-//from other file dictSpock
+//compare vector with python-generated dictionaries in supplements.js
 function categorize(input, option1, option2){
-	//takes three dictionaries, matches input to an option
-	
 	//Find all the words in all the dictionaries, so each dict can be filled out for all words
 	var allWords = $.extend({},input, option1, option2);
 	//console.log("input: "+Object.keys(input).length);
@@ -83,10 +77,10 @@ function categorize(input, option1, option2){
 	//console.log("allWords: "+Object.keys(allWords).length);
 	//console.log("---");
 	
+	//make vectors with counts for all words`
 	var vectorInput = [];
 	var vectorOption1 = [];
 	var vectorOption2 = [];
-	
 	for(var key in allWords) {
 		//console.log("input key-val: "+key+"-"+input[key]);
 		//console.log("option1 key-val: "+key+"-"+option1[key]);
@@ -117,9 +111,12 @@ function categorize(input, option1, option2){
 	//console.log("Option2: "+vectorOption2.length);
 	//console.log("         "+vectorOption2);
 	
+	//calculate cos
 	var cos1 = math.dot(vectorOption1,vectorInput)/(math.norm(vectorOption1)*math.norm(vectorInput));
     var cos2 = math.dot(vectorOption2,vectorInput)/(math.norm(vectorOption2)*math.norm(vectorInput));
-    
+	
+	
+   //make output
 	var winnerString = "";
     if (cos1 > cos2){
 		winnerString += "<h4>Your text most matches Kirk!</h4>";
@@ -151,6 +148,7 @@ function categorize(input, option1, option2){
 	
 	//make output div visible
 	document.getElementById("inoutput").style.visibility = "visible";
+	
 	return winnerString; 
 }
 
@@ -163,7 +161,3 @@ function returnResults(){
 	//document.getElementById("output").innerHTML = categorize(input, dictTest1, dictTest2);
 	document.getElementById("inputAgain").innerHTML = userTxt;
 }
-
-
-
-//});
