@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="pragma" content="no-cache">
+<title>Kirk v. Spock</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/1.6.0/math.min.js"></script>
+<script src="supplements.js"></script>	
+<script src="BagOfWords.js"></script>
+</head>
+
+<body>
+<h2> Are you a Kirk or a Spock?</h2>
+<p> Enter text in the box below to find out.</p>
+<p> Your text will be compared to the text from <a href="http://www.chakoteya.net/startrek/25.htm">the script of This Side of Paradise.</a> </p>
+<p>(Perhaps some day I'll add other episodes or characters.)</p>
+
+<p>Removed . , ! ? : ; ) ( all lower</p>
+
+    <table cellspacing="6" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td>
+			Text to classify:<br/> 
+			<textarea type="text" id="input" placeholder="Enter text here" cols='50' rows='5'></textarea>
+			<br>
+			<button onclick="returnResults()">Submit</button>
+	      </td>
+        </tr>
+      </tbody>
+    </table>
+	
+	<div id="inoutput" style="visibility:hidden">
+		<h3>You said:</h3>
+		<p id="inputAgain"></p>
+		<h3>Result:</h3>
+		<p id="output"></p>
+	</div>
+	
+</body>
+
+</html>
