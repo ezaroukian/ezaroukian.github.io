@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Erin Zaroukian
 locale:           en_US
-url:              
+url:              http://ezaroukian.github.io/
 
 
 # Jekyll configuration
@@ -26,7 +26,7 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Erin Zaroukian
   avatar: bio-photo.jpg
   bio: "Describe your self."
   email: 
