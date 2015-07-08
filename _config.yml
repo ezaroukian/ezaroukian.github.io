@@ -2,7 +2,7 @@
 
 title:            Erin Zaroukian
 locale:           en_US
-url:              http://ezaroukian.github.io/
+url:              http://ezaroukian.github.io
 
 
 # Jekyll configuration
@@ -27,9 +27,9 @@ kramdown:
 # Site owner
 owner:
   name: Erin Zaroukian
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email: 
+  avatar: EZmontmartre.jpg
+  bio: "Postdoctoral Fellow, US Army Research Laboratory"
+  email: egz@jhu.edu
   disqus-shortname: 
   twitter: #username
   facebook: #username
