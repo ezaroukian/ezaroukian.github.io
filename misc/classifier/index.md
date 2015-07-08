@@ -5,7 +5,7 @@ tags: [about, Jekyll, theme, responsive]
 modified: 
 comments: true
 image:
-  feature: marseille.jpg
+  feature: montmartre.jpg
   credit: 
   creditlink: 
 ---
