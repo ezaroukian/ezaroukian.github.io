@@ -12,3 +12,5 @@ image:
 
 
 ## Roulette here
+
+{% include roulette.html %}

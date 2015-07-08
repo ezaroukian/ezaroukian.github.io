@@ -10,9 +10,7 @@ image:
   creditlink: 
 ---
 
-This is where I'll put links to things.
-
-## A header:
+Some things I've done that have some degree of relevance to my work:
 
 * [Roulette](roulette/)
 * [Insult generator](insult/)
