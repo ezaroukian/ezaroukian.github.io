@@ -7,8 +7,13 @@ comments: true
 image:
   feature: barracks.jpg
   credit: EZ
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  creditlink: 
 ---
 
 This is where I'll put links to things.
 
+## A header:
+
+* [Roulette](roulette/)
+* [Insult generator](insult/)
+* [Dialog classifier](BagOfWords/)
