@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Insult generator
+title: Misc > Insult generator
 tags: [about, Jekyll, theme, responsive]
 modified: 
 comments: true
@@ -10,7 +10,5 @@ image:
   creditlink: 
 ---
 
-
-## Insult generator here
 
 {% include_relative insult.html %}

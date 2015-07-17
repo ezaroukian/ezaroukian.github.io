@@ -10,5 +10,4 @@ image:
   creditlink: 
 ---
 
-
-## Classifier here
+{% include_ relative BagOfWords.html %}
