@@ -13,4 +13,4 @@ image:
 
 ## Roulette here
 
-{% include_relative misc/roulette/roulette.html %}
+{% include_relative roulette/roulette.html %}

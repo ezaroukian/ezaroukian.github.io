@@ -1,0 +1,43 @@
+---
+layout: subpage
+title: Dialog classifier
+---
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/1.6.0/math.min.js"></script>
+<script src="bagOfWords/supplements.js"></script>	
+<script src="bagOfWords/BagOfWords.js"></script>
+
+
+<h2> Are you a Kirk or a Spock?</h2>
+<p> Enter text in the box below to find out.</p>
+<p> Your text will be compared to the text from <a href="http://www.chakoteya.net/startrek/episodes.htm">this site.</a> </p>
+<p>(Perhaps some day I'll add other episodes or characters.)</p>
+
+<p>Removed . , ! ? : ; ) ( and made all lower and removed some high frequency words</p>
+<p>Still very under construction</p>
+<p> <a href="bagOfWords/BagOfWords.py">Python code I used to build js dictionaries of Kirk and Spock lines</a></p>
+<p> <a href="bagOfWords/BagOfWords.js">JavaScript code this site is running to build a dictionary of your text and classify it (bag-of-words/VSM-stype)</a></p>
+
+    <table cellspacing="6" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td>
+			Text to classify:<br/> 
+			<textarea type="text" id="input" placeholder="Enter text here" cols='50' rows='5'></textarea>
+			<br>
+			<button onclick="returnResults()">Submit</button>
+	      </td>
+        </tr>
+      </tbody>
+    </table>
+
+	
+	<div id="inoutput" style="visibility:hidden">
+		<h3>You said:</h3>
+		<p id="inputAgain"></p>
+		<h3>Result:</h3>
+		<p id="output"></p>
+	</div>
+
+	
