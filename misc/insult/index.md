@@ -12,3 +12,5 @@ image:
 
 
 ## Insult generator here
+
+{% include_relative insult.html %}
