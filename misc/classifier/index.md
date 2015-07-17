@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dialog classifier
+title: Misc > Dialog classifier
 tags: [about, Jekyll, theme, responsive]
 modified: 
 comments: true
@@ -10,4 +10,4 @@ image:
   creditlink: 
 ---
 
-{% include_ relative BagOfWords.html %}
+{% include_relative BagOfWords.html %}
