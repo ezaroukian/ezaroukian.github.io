@@ -11,27 +11,6 @@
 
 <p> Your text will be compared to the text from <a href="http://www.chakoteya.net/startrek/episodes.htm">this site.</a></p>
 
-
-<p>A few notes:
-	<ul>
-		<li> I remove the following from your input:
-			<ul>
-				<li> . </li>
-				<li> , </li>
-				<li> ! </li>
-				<li> ? </li>
-				<li> : </li>
-				<li> ; </li>
-				<li> ) </li>
-				<li> ( </li>
-				<li> uppercase (everything is converted to lowercase) </li>
-				<li> very high frequency words </li>
-				<li> </li>
-			</ul>
-		</li>
-		<li> This is still rather 'under constuction', someday I may clean things up or give the ability to chose episodes/characters. </li>
-		<li><a href="bagOfWords/BagOfWords.py">Python code I used to build js dictionaries of Kirk and Spock lines</a></li>
-		<li> <a href="bagOfWords/BagOfWords.js">JavaScript code this site is running to build a dictionary of your text and classify it (bag-of-words/VSM-stype)</a> </li>
 </p>
 
     <table cellspacing="6" cellpadding="0" border="0">
@@ -54,5 +33,27 @@
 		<h3>Result:</h3>
 		<p id="output"></p>
 	</div>
+	
+<p>A few notes:
+	<ul>
+		<li> I remove the following from your input:
+			<ul>
+				<li> . </li>
+				<li> , </li>
+				<li> ! </li>
+				<li> ? </li>
+				<li> : </li>
+				<li> ; </li>
+				<li> ) </li>
+				<li> ( </li>
+				<li> uppercase (everything is converted to lowercase) </li>
+				<li> very high frequency words </li>
+				<li> </li>
+			</ul>
+		</li>
+		<li> This is still rather 'under constuction', someday I may clean things up or give the ability to chose episodes/characters. </li>
+		<li><a href="bagOfWords/BagOfWords.py">Python code I used to build js dictionaries of Kirk and Spock lines</a></li>
+		<li> <a href="bagOfWords/BagOfWords.js">JavaScript code this site is running to build a dictionary of your text and classify it (bag-of-words/VSM-stype)</a> </li>
+
 
 </div>
