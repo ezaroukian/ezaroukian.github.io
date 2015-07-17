@@ -51,9 +51,12 @@
 
             <p>Returning to the strategy above, if you bet on 2/3 of the numbers (e.g. two columns or two dozens) and win, your payoff is <i>36/24-1 = .5</i> times your original bet.</p>
 
+			<p>
             <ul>
 				<li>So, if you walked into the casino with $38, placed $19 on the first dozen numbers and $19 on the second dozen numbers, and one of those numbers won, you could walk out with a winnings of <i>36/24 -1 = .5</i> times your original bet (i.e. <i>.5*$38 = $19</i>), or a total of $57 (payoff + bet).</li>
 			</ul>
+			</p>
+			
             <p>If you always bet all your money and always won, your pot would increase by 50% each time. Not bad at all.</p>
             <br>
 
@@ -77,7 +80,7 @@
             <div class="boxed">
             <h3>Some technical details:</h3>
 
-                <p>First, I simulated a single person playing roulette. For me, this involved writing functions to</p>
+                <p>First, I simulated a single person playing roulette. For me, this involved writing functions to
 
                 <ul><li>Play a single round of roulette</li>
                 <ul><li>Determine the outcome (win/lose) of a single round</li>
@@ -86,6 +89,7 @@
                 <ul><li>Recall that if you lose, you lose the amount of money you bet. If you win, you keep the money you bet and get an additional 50%.</li></ul></ul>
                 <li>Play multiple rounds of roulette until the player runs out of money, or until some fixed number of rounds is reached.</li>
                 <ul><li>I kept track of the player's remaining money after each round so that I could graph it using <code>pylab</code>.</li></ul></ul>
+				</p>
                 
             </div>
             <br />
