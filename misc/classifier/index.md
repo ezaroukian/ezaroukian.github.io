@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Misc > Dialog classifier
+title: Misc | Dialog classifier
 tags: [about, Jekyll, theme, responsive]
 modified: 
 comments: true
