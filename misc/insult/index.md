@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Misc > Insult generator
+title: Misc | Insult generator
 tags: [about, Jekyll, theme, responsive]
 modified: 
 comments: true
