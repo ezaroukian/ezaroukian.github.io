@@ -6,8 +6,7 @@ modified:
 comments: true
 image:
   feature: marseille.jpg
-  credit: 
-  creditlink: 
+	description: Calanques de Marseille
 ---
 
 
