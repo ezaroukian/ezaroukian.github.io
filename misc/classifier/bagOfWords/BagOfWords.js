@@ -137,7 +137,7 @@ function categorize(input, option1, option2){
 	winnerString +="<tr><th>Word</th><th>Kirk</th><th>you</th><th>Spock</th></tr>";
 	for (var word in allWords){
 		winnerString +="<tr>";
-		winnerString += "<td  style='padding: 15px;'>"+word+"</td>";
+		winnerString += "<td  style='padding: 5px;'>"+word+"</td>";
 		winnerString += "<td>"+vectorOption1[counter]+"</td>";
 		winnerString += "<td>"+vectorInput[counter]+"</td>";
 		winnerString += "<td>"+vectorOption2[counter]+"</td>";
