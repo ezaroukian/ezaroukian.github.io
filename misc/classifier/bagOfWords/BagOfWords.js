@@ -130,17 +130,17 @@ function categorize(input, option1, option2){
 
 	winnerString += "<p>Kirk's cos = "+cos1+"<p>";
 	winnerString += "<p>Spock's cos = "+cos2+"<p>";
-	winnerString += "<p>Biggest cosine / smallest angle wins<p>";
+	winnerString += "<p>Biggest cosine / smallest angle wins<p><br/>";
 	
 	var counter = 0;
 	winnerString +="<table>";//add borders to hd, td...
 	winnerString +="<tr><th>Word</th><th>Kirk</th><th>you</th><th>Spock</th></tr>";
 	for (var word in allWords){
 		winnerString +="<tr>";
-		winnerString += "<td  style='padding: 5px;'>"+word+"</td>";
-		winnerString += "<td>"+vectorOption1[counter]+"</td>";
-		winnerString += "<td>"+vectorInput[counter]+"</td>";
-		winnerString += "<td>"+vectorOption2[counter]+"</td>";
+		winnerString += "<td >"+word+"</td>";
+		winnerString += "<td style='padding: 5px;'>"+vectorOption1[counter]+"</td>";
+		winnerString += "<td style='padding: 5px;'>"+vectorInput[counter]+"</td>";
+		winnerString += "<td style='padding: 5px;'>"+vectorOption2[counter]+"</td>";
 		winnerString +="</tr>";
 		counter +=1;
 	}
