@@ -1,0 +1,56 @@
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/1.6.0/math.min.js"></script>
+<script src="bagOfWords/supplements.js"></script>	
+<script src="bagOfWords/BagOfWords.js"></script>
+
+
+<h2> Are you a Kirk or a Spock?</h2>
+<h3> Enter text in the box below to find out.</h3>
+<div>
+
+    <table cellspacing="6" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td>
+			Text to classify:<br/> 
+			<textarea type="text" id="input" placeholder="Enter text here" cols='50' rows='5'></textarea>
+			<br>
+			<button onclick="returnResults()">Submit</button>
+	      </td>
+        </tr>
+      </tbody>
+    </table>
+
+	
+	<div id="inoutput" style="visibility:hidden">
+		<h3>You said:</h3>
+		<p id="inputAgain"></p>
+		<h3>Result:</h3>
+		<p id="output"></p>
+	</div>
+	
+<p>A few notes:
+	<ul>
+		<li> I remove the following from your input:
+			<ul>
+				<li> <i>.</i> </li>
+				<li> <i>,</i> </li>
+				<li> <i>!</i> </li>
+				<li> <i>?</i> </li>
+				<li> <i>:</i> </li>
+				<li> <i>;</i> </li>
+				<li> <i>)</i> </li>
+				<li> <i>(</i> </li>
+				<li> uppercase (everything is converted to lowercase) </li>
+				<li> very high frequency words </li>
+				<li> JavaScript reserved words</li>
+			</ul>
+		</li>
+		<li> Your text will be compared to the text from <a href="http://www.chakoteya.net/startrek/episodes.htm">this site</a>.</li>
+		<li> This is still rather 'under constuction', someday I may clean things up or give the ability to chose episodes/characters. </li>
+		<li><a href="bagOfWords/BagOfWords.py">Here</a> is they python code I used to build js dictionaries of Kirk and Spock lines</li>
+		<li> <a href="bagOfWords/BagOfWords.js">Here</a> is the JavaScript code this site is running to build a dictionary of your text and classify it (bag-of-words/VSM-stype) </li>
+
+
+</div>

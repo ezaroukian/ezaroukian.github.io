@@ -1,0 +1,136 @@
+
+<header>
+<h2>A winning strategy?</h2>
+</header>
+
+<div>
+<p>It was suggested to me that, given enough patience, you'll end up ahead in roulette with the following strategy:</p>
+
+<div style="text-align:center">Always bet on 2/3 of the numbers.</div>
+
+<p>If, like me, you know next to nothing about roulette, it may be hard to form an opinion about such a strategy. So, the following section provides some background for those of us who need it (or anyone who enjoys roulette fact checking). If you're already in the know, feel free to skip ahead.</p>
+
+</div>
+
+<h2>Roulette background</h2>
+
+
+<div style="display:block;text-align:center;margin-right:auto;margin-left:auto">
+<a href="http://upload.wikimedia.org/wikipedia/commons/5/5b/American_roulette_table_layout.png" imageanchor="1"><img alt="roulette table" border="0" height="439" src="http://upload.wikimedia.org/wikipedia/commons/5/5b/American_roulette_table_layout.png" width="247"></a>
+</div>
+         
+<div>
+    <ul>
+		<li>There's a table, and there's a wheel.</li>
+		<li>Each have 38 numbers on them (00, 0-36).</li>
+		<li>The wheel is spun to select a single number to be the winner.</li>
+		<li>Before the wheel is spun (obviously), you select numbers to bet on.</li>
+		<li>If the wheel does not land on a number you picked, you lose all the money you bet.</li>
+		<li>If the wheel <i>does</i> land on a number you picked, you win, meaning you get back all the money you bet plus some payoff, which, as <a href="http://en.wikipedia.org/wiki/Roulette">Wikipedia</a> informs me, is <i>36/n - 1</i> (<i>n</i> = total number of numbers you're betting on)</li>
+		<ul>
+			<li>So, if you walked into the casino with $38, placed it all on a single number, and won, you could walk out with a winnings of <i>36/1 -1 = 35</i> times your bet (i.e. <i>35*$38 = $1330</i>), or a total of $1368 (payoff + bet).</li>
+			<li>Or, if you walked into the casino with $38, placed $1 on each number, and one of those numbers (obviously) one, you could walk out with a 'winnings' of <i>36/38 -1 = -.05</i> times your bet (i.e. <i>-.05*$38 = -$1.90</i>), or a total of $36.10 (-$1.90 'winnings + $38 bet <font color="#999999">- Note: I'm not sure this kind of bet is allowed, but if it is, it should be clear why you should not make it</font>).</li>
+		</ul>
+		<li>You can choose 'chunks' (sorry, making up terms here) to bet on.</li>
+		<ul>
+			<li>To bet on a third of the numbers (not including 0 and 00), you can choose:</li>
+			<ul>
+				<li>The first, second, or third column of numbers</li>
+				<li>The first dozen (1-12), second dozen (13-24), or third dozen numbers (25-36)</li></ul>
+				<li><font color="#999999">(There are others you can read about if you interested, but they're not relevant here)</font></li>
+			</ul>
+			<li>If you bet on a chunk and any number in that chunk wins, you win. <font color="#999999">But remember that the n used to calculate your payoff is the number of numbers in the chunk you bet on (i.e. it's the same as if you had bet on each of those numbers individually, this basically just saves you some time and trouble).</font></li>
+			<ul>
+				<li>So, if you walked into the casino with $38, placed it all on the first dozen numbers, and one of those numbers won, you could walk out with a winnings of <i>36/12 -1 = 2</i> times your original bet (i.e. <i>2*$38 = $76</i>), or a total of $108 (payoff + bet).</li>
+			</ul>
+		</ul>
+	</ul>
+</div>
+
+
+<h2>Using math</h2>
+
+<div>
+            <p>Returning to the strategy above, if you bet on 2/3 of the numbers (e.g. two columns or two dozens) and win, your payoff is <i>36/24-1 = .5</i> times your original bet.</p>
+
+			<p>
+            <ul>
+				<li>So, if you walked into the casino with $38, placed $19 on the first dozen numbers and $19 on the second dozen numbers, and one of those numbers won, you could walk out with a winnings of <i>36/24 -1 = .5</i> times your original bet (i.e. <i>.5*$38 = $19</i>), or a total of $57 (payoff + bet).</li>
+			</ul>
+			</p>
+			
+            <p>If you always bet all your money and always won, your pot would increase by 50% each time. Not bad at all.</p>
+            <br>
+
+            <p>But, of course, you don't always win, and when you lose, instead of a 50% increase, you suffer a 100% decrease (i.e. it hurts to lose double how much it helps to win).
+            </p>
+
+            <br>
+            <p>
+            You're betting on 24 out of 38 of the numbers, so you should win ~63% percent of the time. Which means losing ~37% of the time. And if <i>~63 <b>&gt;</b> 2*~37</i>, you might be in business. But, unfortunately, <i>~63 <b>&lt;</b> 2*~37</i>, meaning, on average, you're going to be losing money.
+            </p>
+
+            <p><font color="#999999">Note - Even if there weren't the extra 0 and 00 (meaning you're betting on 24 out of 36 numbers), you still shouldn't come out ahead, since <i>~66 !&gt; ~33</i> (in fact, <i>24/36 = 2*12/36</i>, meaning you would, on average, break even).</font></p>
+</div>
+
+<header>
+<h2>Using repetition</h2>
+</header>
+
+<div>
+            <p>Because I don't trust my math and don't mind a chance to use some python tricks I learned in <a href="https://www.edx.org/">CS 6.00x</a>, I made a Monte Carlo simulation of this strategy (you can find my code <a href="roulette.py">here</a>).</p>
+
+
+            <div class="boxed">
+            <h3>Some technical details:</h3>
+
+                <p>First, I simulated a single person playing roulette. For me, this involved writing functions to
+
+                <ul><li>Play a single round of roulette</li>
+                <ul><li>Determine the outcome (win/lose) of a single round</li>
+                <ul><li>I always bet on number 1-24 and used&nbsp;<code>random.randint()</code> to pick a winning number 1-38.</li></ul>
+                <li>Determine how that outcome affects how much money the player has</li>
+                <ul><li>Recall that if you lose, you lose the amount of money you bet. If you win, you keep the money you bet and get an additional 50%.</li></ul></ul>
+                <li>Play multiple rounds of roulette until the player runs out of money, or until some fixed number of rounds is reached.</li>
+                <ul><li>I kept track of the player's remaining money after each round so that I could graph it using <code>pylab</code>.</li></ul></ul>
+				</p>
+                
+            </div>
+            <br />
+
+            <p>Here's an example of what might happen if you walked up to the table with $60 in your pocket and bet $15 total on 2/3 (minus 0 and 00) of the board, playing for 1000 rounds or until your cash runs out. <font color="#999999">(Remember, if you put $15 in and win, you get back $22.50. If you lose, you get back $0.)&nbsp;</font></p>
+
+            <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="roulette_figure_1-1.png" imageanchor="1"><img alt="1 run, try 1" border="0" height="298" src="roulette_figure_1-1.png" width="400"></a></div>
+            <p>Okay, that's not going to make anyone fall in love with the strategy, but maybe you were just having a bad day. Let's try it again.</p>
+            <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="roulette_figure_1-2.png" imageanchor="1"><img alt="1 run, try 2" border="0" height="298" src="roulette_figure_1-2.png" width="400"></a></div>
+            <p>Yikes, it's looking like maybe our math wasn't too far off. Let's try one more time. Lucky number three...</p>
+            <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="roulette_figure_1-3.png" imageanchor="1"><img alt="1 run, try 3" border="0" height="298" src="roulette_figure_1-3.png" width="400"></a></div>
+            <p>Nope, still doesn't look like a winning strategy.</p>
+
+            <p>We could do this all day, but I promised you a Monte Carlo, so here's 5000 runs of walking up to the table with $60 in your pocket and betting $15 total on 2/3 (minus 0 and 00) of the board. Each time you play 1000 rounds or until your cash runs out.</p>
+
+
+
+            <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="roulette_figure_1.png" imageanchor="1"><img alt="5000 runs" border="0" height="297" src="roulette_figure_1.png" width="400"></a></div>
+            <p>You can see here that, averaging over all 5000 runs of this simulation, by around your 33rd bet, you've lost half your money, and it clearly doesn't get any better as you keep going.</p>
+            
+            <div class="boxed">
+                <h3>Some technical details:</h3>
+
+                <p>To do this, I simply wrote a function that would run my previous code for a single person playing roulette, but repeat it many times. For each round, I averaged the players' remaining money across all the runs so that I could graph is, again using <code>pylab</code>.</p>
+
+            </div>
+            <br />
+</div>
+<header>
+<h2>Conclusion</h2>
+</header>
+
+<div>
+            <p>Two things:
+            <ul>
+				<li>So far as I can tell, this looks like a bad strategy. Though, from what I've seen of roulette, there are no 'good' strategies (the house is always going to have a considerable advantage), but there are some 'less bad' ones (where the house only has a medium-large advantage), and perhaps this is one of them.</li>
+				<li>I make lots of mistakes. If I've gone wrong anywhere, please feel free to <a href="mailto:ezaroukian@gmail.com">point it out</a>.</li>
+			</ul>
+            </p>
+</div>
