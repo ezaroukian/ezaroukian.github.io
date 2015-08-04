@@ -138,9 +138,9 @@ function categorize(input, option1, option2){
 	for (var word in allWords){
 		winnerString +="<tr>";
 		winnerString += "<td >"+word+"</td>";
-		winnerString += "<td style='padding: 5px;'>"+vectorOption1[counter]+"</td>";
-		winnerString += "<td style='padding: 5px;'>"+vectorInput[counter]+"</td>";
-		winnerString += "<td style='padding: 5px;'>"+vectorOption2[counter]+"</td>";
+		winnerString += "<td style='padding:5px;text-align:center;'>"+vectorOption1[counter]+"</td>";
+		winnerString += "<td style='padding: 5px;text-align:center;'>"+vectorInput[counter]+"</td>";
+		winnerString += "<td style='padding: 5px;text-align:center;'>"+vectorOption2[counter]+"</td>";
 		winnerString +="</tr>";
 		counter +=1;
 	}
