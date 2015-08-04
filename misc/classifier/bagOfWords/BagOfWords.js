@@ -133,11 +133,11 @@ function categorize(input, option1, option2){
 	winnerString += "<p>Biggest cosine / smallest angle wins<p>";
 	
 	var counter = 0;
-	winnerString +="<table style='border:1px solid black;border-collapse:collapse;'>";//add borders to hd, td...
+	winnerString +="<table>";//add borders to hd, td...
 	winnerString +="<tr><th>Word</th><th>Kirk</th><th>you</th><th>Spock</th></tr>";
 	for (var word in allWords){
-		winnerString +="<tr style='border:1px solid black;border-collapse:collapse;'>";
-		winnerString += "<td>"+word+"</td>";
+		winnerString +="<tr>";
+		winnerString += "<td  style='border:1px solid black;border-collapse:collapse;'>"+word+"</td>";
 		winnerString += "<td>"+vectorOption1[counter]+"</td>";
 		winnerString += "<td>"+vectorInput[counter]+"</td>";
 		winnerString += "<td>"+vectorOption2[counter]+"</td>";
