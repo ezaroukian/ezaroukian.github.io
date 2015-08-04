@@ -119,13 +119,13 @@ function categorize(input, option1, option2){
    //make output
 	var winnerString = "";
     if (cos1 > cos2){
-		winnerString += "<h4>Your text most matches Kirk!</h4>";
+		winnerString += "<p><b>Your text most matches Kirk!</b></p>";
 	}
 	else if(cos1 < cos2){
-		winnerString += "<h4>Your text most matches Spock!</h4>";
+		winnerString += "<p><b>Your text most matches Spock!</b></p>";
 	}
 	else{
-		winnerString += "It's a tie!";
+		winnerString += "<p><b>It's a tie!</b></p>";
 	}
 
 	winnerString += "<p>Kirk's cos = "+cos1+"<p>";
