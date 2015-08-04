@@ -138,7 +138,7 @@ function categorize(input, option1, option2){
 	for (var word in allWords){
 		winnerString +="<tr>";
 		winnerString += "<td >"+word+"</td>";
-		winnerString += "<td style='padding:5px;text-align:center;'>"+vectorOption1[counter]+"</td>";
+		winnerString += "<td style='padding:5px;text-align:center;'>"+Math.round(vectorOption1[counter]*10000)/10000+"</td>";
 		winnerString += "<td style='padding: 5px;text-align:center;'>"+vectorInput[counter]+"</td>";
 		winnerString += "<td style='padding: 5px;text-align:center;'>"+vectorOption2[counter]+"</td>";
 		winnerString +="</tr>";
