@@ -91,7 +91,7 @@ var grayOutIgnored = function(userText,userDict){
 		userText=userText.replace(regex, "<span style='color:black'>"+key+"</span>");
 	}
  
-	return "<span style='color:gray'>"+RegExp.unquote(userText)+"</span>";
+	return "<span style='color:#FFCC99'>"+RegExp.unquote(userText)+"</span>";
 } 
  
  
