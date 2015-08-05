@@ -189,5 +189,5 @@ function returnResults(){
 	var input = popDictJS(userTxt);
 	document.getElementById("output").innerHTML = categorize(input, dictKirk, dictSpock);
 	//document.getElementById("output").innerHTML = categorize(input, dictTest1, dictTest2);
-	document.getElementById("inputAgain").innerHTML = grayOutIgnored(userTxt,input);
+	document.getElementById("inputAgain").innerHTML = userTxt;//grayOutIgnored(userTxt,input);
 }
