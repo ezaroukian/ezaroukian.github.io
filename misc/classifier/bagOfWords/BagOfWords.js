@@ -5,7 +5,8 @@ var reserved = ["break","default","function","return","var","case","delete","if"
 function popDictJS(txt){
 	//Takes a String, builds dictionary of all words in the file mapped to their counts. Returns dictionary.
 	var user = {};
-	var words = txt.split(" ");
+	var words = txt.split(/\s/);
+	console.log(words);
 	//remove any reserved words (I could remove the frequent words here too)
 	var finalWords = [];
 	var finalWordsTemp = [];
@@ -26,6 +27,7 @@ function popDictJS(txt){
 		var word = finalWords[i];
 		//word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
 		word = word.replace(/\s/g,"");//remove white space
+		console.log(word);
 		if (word.length>1){
 			if (word.charAt(word.length-1) == "." || word.charAt(word.length-1) == "," || word.charAt(word.length-1) == "!" || word.charAt(word.length-1) == "?" || word.charAt(word.length-1) == ":" || word.charAt(word.length-1) == ";" || word.charAt(word.length-1) == ")"){
 				//console.log("Found . , ? ! : ; in "+word);
@@ -36,7 +38,7 @@ function popDictJS(txt){
 			}
 		}
 		finalWords[i] = finalWords[i].toLowerCase();
-		if(finalWords[i].length>0){
+		if(finalWords[i].length>0 &&  finalWords[i]!="-"){
 			finalWordsTemp.push(finalWords[i]);
 		}
 		else{
