@@ -23,7 +23,7 @@ function popDictJS(txt){
 	//remove . , ? ! : ; ) (  and  eol  and  make lowercase 
 	for (i=0; i<finalWords.length; i++){
 		var word = finalWords[i];
-		word = word.replace(/(\r\n|\n|\s|\r)/gm,"");
+		word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
 		if (word.length>1){
 			if (word.charAt(word.length-1) == "." || word.charAt(word.length-1) == "," || word.charAt(word.length-1) == "!" || word.charAt(word.length-1) == "?" || word.charAt(word.length-1) == ":" || word.charAt(word.length-1) == ";" || word.charAt(word.length-1) == ")"){
 				//console.log("Found . , ? ! : ; in "+word);
