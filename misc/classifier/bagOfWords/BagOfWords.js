@@ -24,6 +24,7 @@ function popDictJS(txt){
 	for (i=0; i<finalWords.length; i++){
 		var word = finalWords[i];
 		word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
+		console.log(word);
 		if (word.length>1){
 			if (word.charAt(word.length-1) == "." || word.charAt(word.length-1) == "," || word.charAt(word.length-1) == "!" || word.charAt(word.length-1) == "?" || word.charAt(word.length-1) == ":" || word.charAt(word.length-1) == ";" || word.charAt(word.length-1) == ")"){
 				//console.log("Found . , ? ! : ; in "+word);
