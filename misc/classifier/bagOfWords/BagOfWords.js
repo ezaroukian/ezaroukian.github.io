@@ -23,9 +23,9 @@ function popDictJS(txt){
 	//remove . , ? ! : ; ) (  and  eol  and  make lowercase 
 	for (i=0; i<finalWords.length; i++){
 		var word = finalWords[i];
-		console.log(word);
-		word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
 		
+		word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
+		console.log(word);
 		if (word.length>1){
 			if (word.charAt(word.length-1) == "." || word.charAt(word.length-1) == "," || word.charAt(word.length-1) == "!" || word.charAt(word.length-1) == "?" || word.charAt(word.length-1) == ":" || word.charAt(word.length-1) == ";" || word.charAt(word.length-1) == ")"){
 				//console.log("Found . , ? ! : ; in "+word);
