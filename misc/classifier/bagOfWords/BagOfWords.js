@@ -45,7 +45,7 @@ function popDictJS(txt){
 		
 	}
 	finalWords = finalWordsTemp;
-	console.log(finalWords);
+	//console.log(finalWords);
 	
 	//put counts in dict
 	for (i=0; i<finalWords.length; i++){
@@ -77,6 +77,25 @@ function popDictJS(txt){
 }
 
 
+//Make a version of the input with the unused parts in gray
+var grayOutIgnored = function(userText,userDict){
+	RegExp.quote = function(str) {
+		 return str.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+	 };
+	RegExp.unquote = function(str) {
+		 return str.replace(/\\([.?*+^$[\]\\(){}|-])/g, "$1");
+	 };
+	var userText = RegExp.quote(userText.toLowerCase());
+	for(var key in userDict){
+		var regex = new RegExp(key, "g");
+		userText=userText.replace(regex, "<span style='color:black'>"+key+"</span>");
+	}
+ 
+	return "<span style='color:gray'>"+RegExp.unquote(userText)+"</span>";
+} 
+ 
+ 
+ 
 
 //compare vector with python-generated dictionaries in supplements.js
 function categorize(input, option1, option2){
@@ -150,8 +169,8 @@ function categorize(input, option1, option2){
 		winnerString +="<tr>";
 		winnerString += "<td >"+word+"</td>";
 		winnerString += "<td style='padding:5px;text-align:center;'>"+Math.round(vectorOption1[counter]*10000)/10000+"</td>";
-		winnerString += "<td style='padding: 5px;text-align:center;'>"+Math.round(vectorInput[counter]*10000)/10000+"</td>";
-		winnerString += "<td style='padding: 5px;text-align:center;'>"+Math.round(vectorOption2[counter]*10000)/10000+"</td>";
+		winnerString += "<td style='padding:5px;text-align:center;'>"+Math.round(vectorInput[counter]*10000)/10000+"</td>";
+		winnerString += "<td style='padding:5px;text-align:center;'>"+Math.round(vectorOption2[counter]*10000)/10000+"</td>";
 		winnerString +="</tr>";
 		counter +=1;
 	}
@@ -170,5 +189,5 @@ function returnResults(){
 	var input = popDictJS(userTxt);
 	document.getElementById("output").innerHTML = categorize(input, dictKirk, dictSpock);
 	//document.getElementById("output").innerHTML = categorize(input, dictTest1, dictTest2);
-	document.getElementById("inputAgain").innerHTML = userTxt;
+	document.getElementById("inputAgain").innerHTML = grayOutIgnored(userTxt,input);
 }
