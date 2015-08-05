@@ -8,6 +8,7 @@ function popDictJS(txt){
 	var words = txt.split(" ");
 	//remove any reserved words (I could remove the frequent words here too)
 	var finalWords = [];
+	var finalWordsTemp = [];
 	for (i=0; i<words.length; i++){
 		var safeWord = true; 
 		for (j=0; j<reserved.length; j++){
@@ -23,8 +24,8 @@ function popDictJS(txt){
 	//remove . , ? ! : ; ) (  and  eol  and  make lowercase 
 	for (i=0; i<finalWords.length; i++){
 		var word = finalWords[i];
-		word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
-		console.log("Replaced in"+word);
+		//word = word.replace(/(\r\n|\n|\S|\r)/gm,"");
+		word = word.replace(/\s/g,"");//remove white space
 		if (word.length>1){
 			if (word.charAt(word.length-1) == "." || word.charAt(word.length-1) == "," || word.charAt(word.length-1) == "!" || word.charAt(word.length-1) == "?" || word.charAt(word.length-1) == ":" || word.charAt(word.length-1) == ";" || word.charAt(word.length-1) == ")"){
 				//console.log("Found . , ? ! : ; in "+word);
@@ -35,7 +36,16 @@ function popDictJS(txt){
 			}
 		}
 		finalWords[i] = finalWords[i].toLowerCase();
+		if(finalWords[i].length>0){
+			finalWordsTemp.push(finalWords[i]);
+		}
+		else{
+			console.log("ZERO LENGTH");
+		}
+		
 	}
+	finalWords = finalWordsTemp;
+	console.log(finalWords);
 	
 	//put counts in dict
 	for (i=0; i<finalWords.length; i++){
