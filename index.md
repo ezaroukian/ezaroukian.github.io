@@ -7,4 +7,3 @@ image:
   description: Baltimore
 ---
 
-Feel free to look around using the navigation at the top of this page.
