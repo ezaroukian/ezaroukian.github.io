@@ -1,4 +1,4 @@
-AuthUserFile /ezaroukian.github.io/wedding/.htpasswd
+AuthUserFile /.htpasswd
 AuthType Basic
-AuthName "My Secret Folder"
+AuthName "wedding"
 Require valid-user
