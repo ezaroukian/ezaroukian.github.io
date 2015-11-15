@@ -1,4 +1,0 @@
-AuthUserFile /.htpasswd
-AuthType Basic
-AuthName "wedding"
-Require valid-user
