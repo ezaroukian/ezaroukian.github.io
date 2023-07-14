@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Montessori lunch menu</title>
+    <style>
+
+        th, td {
+            padding: 5px;
+        }
+
+        .daylight {
+            background-color: lightblue;
+        }
+        .highlight {
+            background-color: lightblue;
+        }
+        .dim {
+            color: gray;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>What's for lunch?</h1>
+    <p id="test"></p>
+    <p id="todayIs"></p>
+
+
+
+    <table id="table">
+        <tr>
+            <th>Week</th>
+            <th>Meal</th>
+            <th class="m">Monday</th>
+            <th class="t">Tuesday</th>
+            <th class="w">Wednesday</th>
+            <th class="h">Thursday</th>
+            <th class="f">Friday</th>
+        </tr>
+        <tr class="first">
+            <td>1</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit with milk</td>
+            <td class="t">Fruit with milk</td>
+            <td class="w">Fruit with milk</td>
+            <td class="h">Fruit with milk</td>
+            <td class="f">Fruit with milk</td>
+        </tr>
+        <tr class="first">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Teriyaki Chicken mixed vegetables served w/rice, fruit and milk</td>
+            <td class="t">Pasta and vegetarian meatballs in marinara sauce, fruit and milk</td>
+            <td class="w">Mac & Cheese w/broccoli, fruit and milk</td>
+            <td class="h">Chicken and cheese quesadilla served w/veg, fruit and milk</td>
+            <td class="f">Vegetable lasagna, fruit and milk</td>
+        </tr>
+        <tr class="first">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Cheese and crackers</td>
+            <td class="t">Blueberry Lemon Crispy Bites and milk</td>
+            <td class="w">Oatmeal Cookies and milk</td>
+            <td class="h">Fish crackers and milk</td>
+            <td class="f">Yogurt</td>
+        </tr>
+        <tr class="second">
+            <td>2</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit with milk</td>
+            <td class="t">Fruit with milk</td>
+            <td class="w">Fruit with milk</td>
+            <td class="h">Fruit with milk</td>
+            <td class="f">Fruit with milk</td>
+        </tr>
+        <tr class="second">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Chicken & Dumplings with crackers, fruit and milk</td>
+            <td class="t">Broiled salmon, pasta, vegetable, fruit and milk</td>
+            <td class="w">Chicken and vegetable fried rice, fruit and milk</td>
+            <td class="h">Vegetable lentil soup with crackers, fruit and milk</td>
+            <td class="f">Vegetable pizza, fruit and milk</td>
+        </tr>
+        <tr class="second">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Graham crackers and milk</td>
+            <td class="t">Oatmeal Cookies and milk</td>
+            <td class="w">Fish crackers and milk</td>
+            <td class="h">Blueberry and Lemon Crispy Bites and milk</td>
+            <td class="f">Yogurt</td>
+        </tr>
+        <tr class="third">
+            <td>3</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit with milk</td>
+            <td class="t">Fruit with milk</td>
+            <td class="w">Fruit with milk</td>
+            <td class="h">Fruit with milk</td>
+            <td class="f">Fruit with milk</td>
+        </tr>
+        <tr class="third">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Mac & Cheese w/broccoli, fruit and milk</td>
+            <td class="t">Vegetarian lasagna, fruit and milk</td>
+            <td class="w">Teriyaki chicken and mixed vegetable served w/fruit and milk</td>
+            <td class="h">Pasta and vegetarian meatballs in marinara sauce, fruit and milk</td>
+            <td class="f">Chicken cheese quesadilla served w/vegetable, fruit and milk</td>
+        </tr>
+        <tr class="third">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Fish crackers and milk</td>
+            <td class="t">Cheese and crackers and milk</td>
+            <td class="w">Blueberry and Lemon Crispy Bites and milk</td>
+            <td class="h">Oatmeal Cookies and milk</td>
+            <td class="f">Yogurt</td>
+        </tr>
+        <tr class="fourth">
+            <td>4</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit with milk</td>
+            <td class="t">Fruit with milk</td>
+            <td class="w">Fruit with milk</td>
+            <td class="h">Fruit with milk</td>
+            <td class="f">Fruit with milk</td>
+        </tr>
+        <tr class="fourth">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Chicken and vegetable fried rice served w/fruit and milk</td>
+            <td class="t">Vegetable lentil soup with crackers, fruit and milk</td>
+            <td class="w">Vegetable pizza, with fruit and milk</td>
+            <td class="h">Chicken & Dumplings with crackers, fruit and milk</td>
+            <td class="f">Broiled salmon and pasta, served with fruit and milk</td>
+        </tr>
+        <tr class="fourth">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Oatmeal Cookies and milk</td>
+            <td class="t">Graham crackers and milk</td>
+            <td class="w">Cheese and crackers w/milk</td>
+            <td class="h">Fish crackers and milk</td>
+            <td class="f">Yogurt</td>
+        </tr>
+
+    </table>
+
+
+    <p> <a href="TBM_menu_2022_Updated.pdf">Link full menu pdf here</a> </p>
+
+    <script src="menu2.js"></script>
+</body>
+</html>
