@@ -14,3 +14,4 @@ Some things I've done that have some degree of relevance to my work:
 * [Roulette](roulette/)
 * [Insult generator](insult/)
 * [Dialog classifier](classifier/)
+* [Lunch menu tracker](menu/)
