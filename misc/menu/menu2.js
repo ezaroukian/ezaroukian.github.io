@@ -30,19 +30,19 @@ window.onload = function () {
     switch (week) {
         case 1:
             var elements = document.getElementsByClassName("first");
-            var non = document.querySelectorAll('.second,.third,.fourth');
+            var non = document.querySelectorAll('.second,.thirdo,.fourth');
             break;
         case 2:
             var elements = document.getElementsByClassName("second");
-            var non = document.querySelectorAll('.first,.third,.fourth');
+            var non = document.querySelectorAll('.first,.thirdo,.fourth');
             break;
         case 3:
-            var elements = document.getElementsByClassName("third");
+            var elements = document.getElementsByClassName("thirdo");
             var non = document.querySelectorAll('.first,.second,.fourth');
             break;
         case 4:
             var elements = document.getElementsByClassName("fourth");
-            var non = document.querySelectorAll('.first,.second,.third');
+            var non = document.querySelectorAll('.first,.second,.thirdo');
             break;
         default:
             var elements = [];
