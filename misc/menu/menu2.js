@@ -68,7 +68,7 @@ window.onload = function () {
             var colElements = [];
     }
     for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('highlight');
+        elements[i].classList.add('hlight');
     }
     for (var i = 0; i < colElements.length; i++) {
         colElements[i].classList.add('daylight');
