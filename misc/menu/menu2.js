@@ -23,7 +23,7 @@ week = (1 + Math.floor((today.getDate() - week1.getDate()) / 7)) % 4;
 document.getElementById("todayIs").innerHTML = "Today is "+day+", "+month+" "+d+", "+yyyy+".";
 
 if(day=="Saturday" || day=="Sunday"){
-	document.getElementById("todayIs").innerHTML += "Consult Week "+week+" for the next meal.";
+	document.getElementById("todayIs").innerHTML += " Consult Week "+week+" for the next meal.";
 }
 
 window.onload = function () {
