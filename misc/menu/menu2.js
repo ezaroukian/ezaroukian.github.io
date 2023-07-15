@@ -74,7 +74,7 @@ window.onload = function () {
         colElements[i].classList.add('daylight');
     }
     for (var i = 0; i < non.length; i++) {
-        non[i].classList.add('dim');
+        non[i].classList.add('dimRow');
     }
 
    
