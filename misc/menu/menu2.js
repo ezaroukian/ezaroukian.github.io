@@ -40,7 +40,7 @@ window.onload = function () {
             var elements = document.getElementsByClassName("thirdo");
             var non = document.querySelectorAll('.first,.second,.fourth');
             break;
-        case 4:
+        case 0:
             var elements = document.getElementsByClassName("fourth");
             var non = document.querySelectorAll('.first,.second,.thirdo');
             break;
