@@ -14,10 +14,11 @@ var day = days[today.getDay()];
 
 
 //should get date in Eastern time
-//week 1 starts 7/10/2023 -- moved to Saturday, hopefully this means the next week will show up on the weekend.
+//week 1 starts 7/10/2023 -- moved to Saturday so the next week will show up on the weekend.
 week1 = new Date(2023, 6, 8);//month is 0 indexed, = Saturday July 8 
-week = (1 + Math.floor((today.getDate() - week1.getDate()) / 7)) % 4;
-
+var Diff_days = Math.round((today - week1) / (1000 * 60 * 60 * 24));
+week = (Math.floor(Diff_days / 7)) % 4 + 1; //Floor then add 1 to get weeks 1-4 (not 0-3)
+console.log(week);
 
 //document.getElementById("test").innerHTML = today;
 document.getElementById("todayIs").innerHTML = "Today is "+day+", "+month+" "+d+", "+yyyy+".";
@@ -40,7 +41,7 @@ window.onload = function () {
             var elements = document.getElementsByClassName("thirdo");
             var non = document.querySelectorAll('.first,.second,.fourth');
             break;
-        case 0:
+        case 4:
             var elements = document.getElementsByClassName("fourth");
             var non = document.querySelectorAll('.first,.second,.thirdo');
             break;
