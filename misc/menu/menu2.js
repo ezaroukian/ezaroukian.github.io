@@ -16,7 +16,10 @@ var day = days[today.getDay()];
 //should get date in Eastern time
 //week 1 starts 8/19/2023 -- moved to Saturday so the next week will show up on the weekend.
 week1 = new Date(2023, 7, 19);//month is 0 indexed, = Saturday August 19 
-var Diff_days = Math.round((today - week1) / (1000 * 60 * 60 * 24));
+var Diff_days = Math.floor((today - week1) / (1000 * 60 * 60 * 24));
+//console.log(today);
+//console.log(week1);
+//console.log(Diff_days);
 week = (Math.floor(Diff_days / 7)) % 4 + 1; //Floor then add 1 to get weeks 1-4 (not 0-3)
 console.log(week);
 
