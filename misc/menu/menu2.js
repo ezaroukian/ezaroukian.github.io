@@ -83,3 +83,6 @@ window.onload = function () {
 
    
 }
+
+var lastModificationDate = new Date(document.lastModified);
+document.getElementById("update").innerHTML = "Page last updated: " + lastModificationDate;
