@@ -3,4 +3,4 @@ title: "CV"
 permalink: /cv/
 ---
 
-CV with links to publications and other materials: [CV](https://ezaroukian.github.io/cv/CV.pdf).
+For my CV with links to publications and other material, click [here](https://ezaroukian.github.io/cv/CV.pdf).
