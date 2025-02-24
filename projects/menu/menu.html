@@ -1,0 +1,173 @@
+﻿<!--<!DOCTYPE html>-->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Montessori lunch menu</title>
+    <style>
+	<!--
+		table, th, td, tr {
+			all: revert;
+		} -->
+		table {
+			border-collapse: collapse;
+		}
+        th, td {
+            padding: 7px;
+			vertical-align: top;
+        }
+
+        .daylight {
+            background-color: lightblue;
+        }
+        .hlight {
+            background-color: lightblue;
+			color: black !important;
+        }
+        .dimRow {
+            color: gray;
+        }
+		td:nth-of-type(1) {
+			font-weight: bold;
+		}
+		td:nth-of-type(2) {
+			font-weight: bold;
+		}
+       
+    </style>
+</head>
+<body>
+    <h1>What's for lunch?</h1>
+    <p id="test"></p>
+    <p id="todayIs"></p>
+
+
+
+    <table id="table">
+        <tr>
+            <th>Week</th>
+            <th>Meal</th>
+            <th class="m">Monday</th>
+            <th class="t">Tuesday</th>
+            <th class="w">Wednesday</th>
+            <th class="h">Thursday</th>
+            <th class="f">Friday</th>
+        </tr>
+        <tr class="first">
+            <td>1</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit & milk</td>
+            <td class="t">Fruit & milk</td>
+            <td class="w">Fruit & milk</td>
+            <td class="h">Fruit & milk</td>
+            <td class="f">Fruit & milk</td>
+        </tr>
+        <tr class="first">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Teriyaki chicken, Asian mixed vegetables, served with rice, fruit & milk</td>
+            <td class="t">Pasta and Meatballs in a Marinara Sauce, Mixed Vegetables, Fruit and Milk</td>
+            <td class="w">Macaroni and Cheese with Cooked Carrots, Fruit and Milk</td>
+            <td class="h">Chicken and Cheese Quesadilla, Broccoli, Fruit and Milk</td>
+            <td class="f">Tuna Fish on Whole Wheat Bread, Cucumber and Tomato Salad, Fruit and Milk</td>
+        </tr>
+        <tr class="first">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Cheese & crackers</td>
+            <td class="t">Goldfish with Cheese Stick</td>
+            <td class="w">Animal Crackers with Milk</td>
+            <td class="h">Pretzels with Cheese</td>
+            <td class="f">Yogurt with Cereal</td>
+        </tr>
+        <tr class="second">
+            <td>2</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit & milk</td>
+            <td class="t">Fruit & milk</td>
+            <td class="w">Fruit & milk</td>
+            <td class="h">Fruit & milk</td>
+            <td class="f">Fruit & milk</td>
+        </tr>
+        <tr class="second">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Salmon and Pasta, Green Beans, Fruit and Milk</td>
+            <td class="t">Chicken Fried Rice, Mixed Vegetables, Fruit and Milk</td>
+            <td class="w">Chicken and Cheese on Whole Wheat Bread, Cucumber and Tomato Salad, Fruit and Milk</td>
+            <td class="h">Cheese and Peperoni Pizza, Broccoil, Fruit and Milk</td>
+            <td class="f">Grilled Cheese, Tomato Soup, Fruit and Milk</td>
+        </tr>
+        <tr class="second">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Cheese Sticks & Crackers</td>
+            <td class="t">Oatmeal Cookies with Milk</td>
+            <td class="w">Graham Crackers with Fruit</td>
+            <td class="h">Goldfish with Cucumber</td>
+            <td class="f">Yogurt with Cereal</td>
+        </tr>
+        <tr class="thirdo">
+            <td>3</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit & milk</td>
+            <td class="t">Fruit & milk</td>
+            <td class="w">Fruit & milk</td>
+            <td class="h">Fruit & milk</td>
+            <td class="f">Fruit & milk</td>
+        </tr>
+        <tr class="thirdo">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Macaroni and Cheese with Cooked Carrots, Fruit and Milk</td>
+            <td class="t">Tuna Fish on Whole Wheat Bread, Cucumber and Tomato Salad, Fruit and Milk</td>
+            <td class="w">Teriyaki chicken, Asian mixed vegetables, served with rice, fruit & milk</td>
+            <td class="h">Pasta and Meatballs in a Marinara Sauce, Mixed Vegetables, Fruit and Milk</td>
+            <td class="f">Chicken and Cheese Quesadilla, Broccoli, Fruit and Milk</td>
+        </tr>
+        <tr class="thirdo">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Cheese & Crackers</td>
+            <td class="t">Graham Crackers</td>
+            <td class="w">Goldfish with Cheese Stick</td>
+            <td class="h">Pretzels with Cheese</td>
+            <td class="f">Yogurt with Cereal</td>
+        </tr>
+        <tr class="fourth">
+            <td>4</td>
+            <td>AM Snack</td>
+            <td class="m">Fruit & milk</td>
+            <td class="t">Fruit & milk</td>
+            <td class="w">Fruit & milk</td>
+            <td class="h">Fruit & milk</td>
+            <td class="f">Fruit & milk</td>
+        </tr>
+        <tr class="fourth">
+            <td> </td>
+            <td>Lunch</td>
+            <td class="m">Chicken Fried Rice, Mixed Vegetables, Fruit and Milk</td>
+            <td class="t">Chicken and Cheese on Whole Wheat Bread, Cucumber and Tomato Salad, Fruit and Milk </td>
+            <td class="w">Cheese and Peperoni Pizza, Broccoil, Fruit and Milk</td>
+            <td class="h">Grilled Cheese, Tomato Soup, Fruit and Milk</td>
+            <td class="f">Salmon and Pasta, Green Beans, Fruit and Milk</td>
+        </tr>
+        <tr class="fourth">
+            <td> </td>
+            <td>PM Snack</td>
+            <td class="m">Cheese Sticks & Cracker</td>
+            <td class="t">Animal Crackers with Fruit</td>
+            <td class="w">Goldfish with Cucumber</td>
+            <td class="h">Oatmeal Cookies with Milk</td>
+            <td class="f">Yogurt with Cereal</td>
+        </tr>
+
+    </table>
+
+
+    <p> <a href="TBM+Locust+Point+Menu-1692639117783.pdf">See menu pdf here</a> </p>
+    <p id="update"></p>
+
+    <script src="menu2.js"></script>
+</body>
+</html>
