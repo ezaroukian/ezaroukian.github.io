@@ -3,7 +3,7 @@ permalink: /projects/
 title: "Projects"
 ---
 
-Here are a few for-fun projects.
+Here are a few for-fun projects (needs to be updated).
 
 * [Roulette](roulette/)
 * [Insult generator](insult/)
