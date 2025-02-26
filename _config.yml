@@ -83,6 +83,8 @@ footer:
 #    - label: "GitHub"
 #      icon: "fab fa-fw fa-github"
 #      url: "https://github.com/ezaroukian"
+atom_feed:
+  hide: true
 
 defaults:
   # _posts
