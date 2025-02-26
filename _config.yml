@@ -72,7 +72,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/ezaroukian"
     - label: "ResearchGate"
-      icon: 
+      icon: "fa-brands fa-researchgate"
       url: "https://www.researchgate.net/profile/Erin-Zaroukian-2/"
     - label: "LinkedIn"
       icon: "fa-fw fab fa-orcid"
