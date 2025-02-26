@@ -2,7 +2,7 @@
 layout: page
 title: Projects | Menu
 layout: single
-author_profile: true
+author_profile: false
 ---
 
 
