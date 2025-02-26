@@ -1,6 +1,7 @@
 ---
 permalink: /projects/roulette/
 title: "Projects | Roulette"
+author_profile: true
 ---
 
 
