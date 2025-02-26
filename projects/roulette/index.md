@@ -1,5 +1,4 @@
 ---
-permalink: /roulette/
 title: "Projects | Roulette"
 ---
 
