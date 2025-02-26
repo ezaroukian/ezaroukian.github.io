@@ -1,12 +1,8 @@
 ---
 layout: page
-title: Misc | Menu
-tags: [about, Jekyll, theme, responsive]
-modified: 
-comments: true
-image:
-  feature: marseille.jpg
-  description: Calanques de Marseille
+title: Projects | Menu
+layout: single
+author_profile: true
 ---
 
 
