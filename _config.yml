@@ -79,10 +79,10 @@ author:
       url: "https://orcid.org/0000-0002-1381-085X"
 
 footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ezaroukian"
+#  links:
+#    - label: "GitHub"
+#      icon: "fab fa-fw fa-github"
+#      url: "https://github.com/ezaroukian"
 
 defaults:
   # _posts
