@@ -162,7 +162,7 @@ function categorize(input, option1, option2){
 
 	winnerString += "<p>Kirk's cos = "+cos1+"<p>";
 	winnerString += "<p>Spock's cos = "+cos2+"<p>";
-	winnerString += "<p>Biggest cosine / smallest angle wins<p><br/>";
+	winnerString += "<p>Biggest cosine, i.e., smallest angle, wins<p><br/>";
 	
 	var counter = 0;
 	winnerString +="<table>";//add borders to hd, td...
