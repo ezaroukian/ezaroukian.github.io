@@ -1,12 +1,8 @@
 ---
-layout: page
-title: Misc | Dialog classifier
-tags: [about, Jekyll, theme, responsive]
-modified: 
-comments: true
-image:
-  feature: montmartre.jpg
-  description: Paris - view from Montmartre (on a day with especially low air quality)
+permalink: /projects/classifier/
+title: "Projects | Dialogue Classifier"
+layout: single
+author_profile: false
 ---
 
 {% include_relative BagOfWords.html %}
