@@ -144,7 +144,6 @@ function categorize(input, option1, option2){
 	//console.log("         "+vectorOption2);
 	
 	//calculate cos
-	const math = require('mathjs');
 	var cos1 = math.dot(vectorOption1,vectorInput)/(math.norm(vectorOption1)*math.norm(vectorInput));
     	var cos2 = math.dot(vectorOption2,vectorInput)/(math.norm(vectorOption2)*math.norm(vectorInput));
 	
