@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Projects | Menu
+permalink: /projects/menu/
+title: "Projects | Menu"
 layout: single
 author_profile: false
 ---
