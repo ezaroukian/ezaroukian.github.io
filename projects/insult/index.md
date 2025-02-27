@@ -1,12 +1,8 @@
 ---
-layout: page
-title: Misc | Insult generator
-tags: [about, Jekyll, theme, responsive]
-modified: 
-comments: true
-image:
-  feature: marseille.jpg
-  description: Calanques de Marseille
+permalink: /projects/insult/
+title: "Projects | Insult Generator"
+layout: single
+author_profile: false
 ---
 
 
